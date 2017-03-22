@@ -28,15 +28,39 @@
 //     // }
 // });
 
+// Attribute and Class binding
+// let app = new Vue({
+//     el: '#root',
+//     data: {
+//         title: 'Custom Title Javascript',
+//         isLoading: false
+//     },
+//     methods: {
+//         toggleButton() {
+//             this.isLoading = !this.isLoading;
+//         }
+//     }
+// });
+
+// Computed Properties
 let app = new Vue({
     el: '#root',
     data: {
-        title: 'Custom Title Javascript',
-        isLoading: false
+        tasks: [
+            { description: '1 Task', completed: true },
+            { description: '2 Task', completed: false },
+            { description: '3 Task', completed: false },
+            { description: '4 Task', completed: false },
+            { description: '5 Task', completed: false },
+            { description: '6 Task', completed: true },
+        ]
     },
-    methods: {
-        toggleButton() {
-            this.isLoading = !this.isLoading;
+    computed: {
+        incompletedTasks() {
+            return this.tasks.filter(task => ! task.completed)
+        },
+        completedTasks() {
+            return this.tasks.filter(task => task.completed)
         }
     }
-});
+})
