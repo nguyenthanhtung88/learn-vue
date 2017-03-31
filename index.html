@@ -3,14 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title>Learning Vue 2</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css" />
         <style>
             .bg-red {background: red;}
             .bg-blue {background: blue;}
             .is-loading {background: pink;}
+            body {padding-top: 40px;}
         </style>
     </head>
     <body>
-        <div id="root">
+        <div id="root" class="container">
             <!-- Basic text -->
             <!-- <input type="text" id="input" v-model="message" />
 
@@ -28,7 +30,7 @@
             <!-- <button :title="title" :class="{ 'is-loading': isLoading }" @click="toggleButton">Toggle Me</button> -->
 
             <!-- Computed Properties -->
-            <h2>All Tasks</h2>
+            <!-- <h2>All Tasks</h2>
             <ul>
                 <li v-for="task in completedTasks" v-text="task.description"></li>
             </ul>
@@ -36,7 +38,32 @@
             <h2>Incompleted Tasks</h2>
             <ul>
                 <li v-for="task in incompletedTasks" v-text="task.description"></li>
-            </ul>
+            </ul> -->
+
+            <!-- Components -->
+            <!-- <task-list></task-list> -->
+
+            <!-- Message Component -->
+            <!-- <message title="First Title" body="First Body"></message>
+            <message title="Second Title" body="Second Body"></message> -->
+
+            <!-- Modal Component -->
+            <!-- <button @click="isShow = true">Show Modal</button>
+            <modal v-show="isShow" @close="isShow = false">
+                <p>Any other Bulma elements you want</p>
+            </modal> -->
+
+            <tabs>
+                <tab name="About" :selected="true">
+                    <h1>This is About content.</h1>
+                </tab>
+                <tab name="About Us">
+                    <h1>This is About Us content.</h1>
+                </tab>
+                <tab name="About Our Vision">
+                    <h1>This is About Our Vision content.</h1>
+                </tab>
+            </tabs>
         </div>
 
         <script src="https://unpkg.com/vue@2.2.4"></script>
