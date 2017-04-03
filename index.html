@@ -53,7 +53,8 @@
                 <p>Any other Bulma elements you want</p>
             </modal> -->
 
-            <tabs>
+            <!-- Tabs Component  -->
+            <!-- <tabs>
                 <tab name="About" :selected="true">
                     <h1>This is About content.</h1>
                 </tab>
@@ -63,7 +64,29 @@
                 <tab name="About Our Vision">
                     <h1>This is About Our Vision content.</h1>
                 </tab>
-            </tabs>
+            </tabs> -->
+
+            <!-- Component Communication (#1 Custom Events) -->
+            <!-- <coupon @applied="applyCoupon"></coupon>
+            <h1 v-show="isCouponApplied">Coupon Code is applied</h1> -->
+
+            <!-- Component Communication (#2 Event Dispatcher) -->
+            <!-- <coupon></coupon>
+            <h1 v-show="isCouponApplied">Coupon Code is applied</h1> -->
+
+            <!-- Named Slot -->
+            <modal>
+                <template slot="header">
+                    This is title
+                </template>
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                <template slot="footer">
+                    <a class="button is-success">Save changes</a>
+                    <a class="button">Cancel</a>
+                </template>
+            </modal>
         </div>
 
         <script src="https://unpkg.com/vue@2.2.4"></script>
