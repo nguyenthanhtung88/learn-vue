@@ -75,7 +75,7 @@
             <h1 v-show="isCouponApplied">Coupon Code is applied</h1> -->
 
             <!-- Named Slot -->
-            <modal>
+            <!-- <modal>
                 <template slot="header">
                     This is title
                 </template>
@@ -86,7 +86,16 @@
                     <a class="button is-success">Save changes</a>
                     <a class="button">Cancel</a>
                 </template>
-            </modal>
+            </modal> -->
+
+            <!-- Single-Use Component and Inline Template -->
+            <progress-view inline-template>
+                <div>
+                    <h1>Current progress: {{ currentProgress }}%</h1>
+
+                    <p><button @click="currentProgress += 10">Update</button></p>
+                </div>
+            </progress-view>
         </div>
 
         <script src="https://unpkg.com/vue@2.2.4"></script>
