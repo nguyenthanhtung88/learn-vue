@@ -10,9 +10,10 @@ let scriptNameArr = [
     '09_custom_event',
     '10_event_dispatcher',
     '11_named_slot',
-    '12_inline_template'
+    '12_inline_template',
+    '13_shared_state'
 ]
-let scriptIndex = 11
+let scriptIndex = 12
 
 let scriptEl = document.createElement('script')
 scriptEl.src = `./js/${scriptNameArr[scriptIndex]}.js`
